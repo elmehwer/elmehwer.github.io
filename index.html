@@ -4,5 +4,198 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>وكالة المحور للدعاية والإعلان</title>
-  ...
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      overflow-x: hidden;
+    }
+    .loader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .loader img {
+      width: 100px;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    header {
+      background-color: #002244;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    header img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+    nav {
+      background-color: #ff6600;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+      text-align: center;
+    }
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 250px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: auto;
+    }
+    input, textarea, button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e65c00;
+    }
+    .contact-info {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 0 10px;
+      text-decoration: none;
+      color: #002244;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader">
+    <img src="الفيس1.png" alt="جاري التحميل...">
+  </div>
+
+  <header class="fade-in">
+    <img src="الفيس1.png" alt="لوجو المحور">
+    <h1>وكالة المحور للدعاية والإعلان</h1>
+    <p>نصنع أفكاراً ترويجية تليق بك</p>
+  </header>
+
+  <nav class="fade-in">
+    <a href="#home">الرئيسية</a>
+    <a href="#services">خدماتنا</a>
+    <a href="#portfolio">أعمالنا</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+
+  <section id="home" class="fade-in">
+    <h2>مرحباً بك في عالم الإبداع</h2>
+    <p>نقدم لك حلولاً إعلانية مبتكرة تناسب جميع احتياجاتك</p>
+  </section>
+
+  <section id="services" class="fade-in">
+    <h2>خدماتنا</h2>
+    <ul>
+      <li>تصميمات جرافيك احترافية</li>
+      <li>إعلانات سوشيال ميديا</li>
+      <li>طباعة جميع أنواع المطبوعات</li>
+      <li>تصميم الهوية البصرية</li>
+    </ul>
+  </section>
+
+  <section id="portfolio" class="fade-in">
+    <h2>أعمالنا</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/250x150?text=تصميم+1" alt="تصميم 1">
+      <img src="https://via.placeholder.com/250x150?text=تصميم+2" alt="تصميم 2">
+      <img src="https://via.placeholder.com/250x150?text=تصميم+3" alt="تصميم 3">
+    </div>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>تواصل معنا</h2>
+    <form>
+      <input type="text" placeholder="الاسم الكامل" required>
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <textarea placeholder="اكتب رسالتك هنا" rows="5" required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+    <div class="contact-info">
+      <p>📞 هاتف: 01017116974</p>
+      <p>📱 واتساب: 01287112585</p>
+      <p>📧 البريد الإلكتروني: ahmedfathy99010@gmail.com</p>
+    </div>
+    <div class="social-links">
+      <p>تابعنا على:</p>
+      <a href="https://www.facebook.com/profile.php?id=61576036840663" target="_blank">فيسبوك</a>
+      <a href="https://www.instagram.com/el_mehwer99" target="_blank">إنستجرام</a>
+    </div>
+  </section>
+
+  <footer class="fade-in">
+    <p>&copy; 2025 وكالة المحور للدعاية والإعلان - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script>
+    window.addEventListener("load", function () {
+      document.querySelector(".loader").style.display = "none";
+      document.querySelectorAll('.fade-in').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 300);
+      });
+    });
+  </script>
+</body>
 </html>
