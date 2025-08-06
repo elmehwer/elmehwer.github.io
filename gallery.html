@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>وكالة المحور - الموقع الرسمي</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fefefe;
+      margin: 0;
+      padding: 0 20px;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    nav {
+      background: #fff;
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 0 5px #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: darkred;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1, h2 {
+      color: #b30000;
+      text-align: center;
+      margin-top: 40px;
+    }
+    /* خدمات */
+    #services {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 10px;
+    }
+    .service-item {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ddd;
+      transition: box-shadow 0.3s ease;
+    }
+    .service-item:hover {
+      box-shadow: 0 0 15px #b30000;
+    }
+    .service-item h3 {
+      color: darkred;
+      margin-bottom: 10px;
+    }
+    /* معرض الصور */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 40px auto;
+      max-width: 900px;
+    }
+    .gallery img {
+      width: 280px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ddd;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    /* تواصل معنا */
+    #contact {
+      max-width: 600px;
+      margin: 40px auto 60px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ddd;
+    }
+    #contact form {
+      display: flex;
+      flex-direction: column;
+    }
+    #contact label {
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    #contact input, #contact textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      resize: vertical;
+    }
+    #contact button {
+      margin-top: 20px;
+      background: darkred;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #contact button:hover {
+      background: #b30000;
+    }
+    /* للأجهزة الصغيرة */
+    @media (max-width: 600px) {
+      .gallery img {
+        width: 100%;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">🏠 الرئيسية</a>
+    <a href="#services">💼 خدماتنا</a>
+    <a href="#gallery">🖼️ معرض الصور</a>
+    <a href="#contact">📨 تواصل معنا</a>
+  </nav>
+
+  <section id="home">
+    <h1>مرحبا بكم في وكالة المحور للدعاية والإعلان</h1>
+    <p style="max-width: 700px; margin: 0 auto; text-align: center;">
+      وكالة المحور تقدم أفضل الخدمات في مجال الدعاية والإعلان، مع فريق محترف وخبرات واسعة لضمان نجاح مشروعك.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>خدماتنا</h2>
+    <div class="service-item">
+      <h3>تصميم جرافيكي</h3>
+      <p>تصميم شعارات، بوسترات، وكروت عمل بأسلوب احترافي وجذاب.</p>
+    </div>
+    <div class="service-item">
+      <h3>التسويق الرقمي</h3>
+      <p>خدمات التسويق عبر وسائل التواصل الاجتماعي وحملات إعلانية موجهة.</p>
+    </div>
+    <div class="service-item">
+      <h3>الطباعة والتغليف</h3>
+      <p>طباعة بجودة عالية وتصميم أغلفة المنتجات بشكل مميز.</p>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>معرض أعمالنا</h2>
+    <div class="gallery">
+      <img src="images/work1.jpg" alt="تصميم رقم 1" />
+      <img src="images/work2.jpg" alt="تصميم رقم 2" />
+      <img src="images/work3.jpg" alt="تصميم رقم 3" />
+      <img src="images/work4.jpg" alt="تصميم رقم 4" />
+      <img src="images/work5.jpg" alt="تصميم رقم 5" />
+      <img src="images/work6.jpg" alt="تصميم رقم 6" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>تواصل معنا</h2>
+    <form>
+      <label for="name">الاسم:</label>
+      <input type="text" id="name" name="name" placeholder="اكتب اسمك" required />
+
+      <label for="email">البريد الإلكتروني:</label>
+      <input type="email" id="email" name="email" placeholder="اكتب بريدك الإلكتروني" required />
+
+      <label for="message">رسالتك:</label>
+      <textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا" required></textarea>
+
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
+
+</body>
+</html>
